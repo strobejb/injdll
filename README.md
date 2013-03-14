@@ -7,29 +7,29 @@ injdll is a DLL injection tool that was written many years ago. Probably better 
 Listing Modules
 ---------------
 
-injdll -list <process>
+    injdll -list <process>
 
 * process - process ID or name of process
 
 Example:
-injdll -list notepad.exe
+    injdll -list notepad.exe
 
 Injecting DLLs
 ---------------
 
-injdll -load <process> <dll> 
+    injdll -load <process> <dll> 
 
 * process - process ID or name of process
 * dll - path to DLL to inject
 
 Example:
-injdll -load notepad.exe mydll.dll
+    injdll -load notepad.exe mydll.dll
 
 
 Calling functions
 -----------------
 
-injdll -call <process> <dll> <function> <argument>
+    injdll -call <process> <dll> <function> <argument>
 
 * process - process ID or name or process
 * dll - name or path of DLL in target process
@@ -38,6 +38,6 @@ injdll -call <process> <dll> <function> <argument>
 
 The target function must have the following prototype:
 
-int WINAPI Function(wchar_t * parameter);
+    int WINAPI Function ( wchar_t * parameter );
 
 
